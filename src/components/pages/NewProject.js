@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 function NewProject() {
 
-    const history = useNavigate()
+    const navigate = useNavigate()
 
     function createPost(projetos) {
 
@@ -23,7 +23,7 @@ function NewProject() {
         .then((data) => {
             console.log(data)
             //redirect
-            history('/projetos', {message: 'Projeto criado com sucesso!' })
+            navigate('/projetos', {state: {message: 'Projeto criado com sucesso!' }})
         })
         .catch(err => console.log(err))
 
