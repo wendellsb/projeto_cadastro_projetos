@@ -3,7 +3,6 @@ import styles from './NewProject.module.css'
 import { useNavigate } from 'react-router-dom'
 
 function NewProject() {
-
     const navigate = useNavigate()
 
     function createPost(projetos) {
